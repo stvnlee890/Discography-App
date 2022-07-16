@@ -1,13 +1,22 @@
 import { useNavigate, Link } from 'react-router-dom'
 
 
-function Search({ handleSubmit, handleChange, searchArtist }){
+function Search({ searchArtist, setSearchArtist, getImages }){
 
+  function handleChange(event) {
+    console.log(event.target.value)
+    setSearchArtist(event.target.value);
+  }
+  function handleSubmit(event) {
+    event.preventDefault();
+    console.log(event.target.value)
+    getImages();
+  }
   return(
    <form onSubmit={handleSubmit} >
-    <input placeholder="search artist" type='text' required onChange={handleChange}>
+    <input placeholder="search artist" type='text' required onChange={handleChange} value={searchArtist}>
     </input>
-    <button>
+    <button type='submit' >
       search
     </button>
    </form>

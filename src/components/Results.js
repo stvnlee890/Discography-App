@@ -8,7 +8,7 @@ function Results({ images }) {
     <h2>
       Results page
     </h2>
-    {/* <img src ={images.results[0].thumb} /> */}
+    <img src ={images} />
    </div>
   )
 }

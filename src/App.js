@@ -6,15 +6,12 @@ import Home from './components/Home';
 import Results from './components/Results';
 import Search from './components/Search';
 
-
-
-
 function App() {
   const[images, setImages] = useState([])
   const[searchArtist, setSearchArtist] = useState('')
- 
-  function getImages(searchArtist) {
-
+//  console.log(images)
+  
+  function getImages() {
   const searchOptions = {
     key: process.env.REACT_APP_DISCOG_KEY,
     secret: process.env.REACT_APP_DISCOG_SECRET,
@@ -29,30 +26,22 @@ function App() {
   fetch(url)
   .then(response => response.json())
   .then(response => {
-    setImages(response);
+    setImages(response.results[0].thumb);
     setSearchArtist('');
     console.log(response)
   })
   .catch(console.error);
 
 }
-useEffect(() => {
-  getImages(searchArtist)
-}, [])
 
-function handleChange(event) {
-  console.log(event.target.value)
-  setSearchArtist(event.target.value);
-}
-function handleSubmit(event) {
-  event.preventDefault();
-  console.log(event.target.value)
-  getImages(searchArtist);
-}
+useEffect(() => {
+  getImages()
+}, [])
 
   return (
     <div className="App">
-      <Search handleChange={handleChange} handleSubmit={handleSubmit} searchArtist={searchArtist} />
+      <Search  searchArtist={searchArtist} setSearchArtist={setSearchArtist} getImages={getImages}/>
+      <Home />
       <Results images={images} />
     </div>
   );
