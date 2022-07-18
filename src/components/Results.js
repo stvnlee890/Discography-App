@@ -1,6 +1,7 @@
 
 import React from "react";
 import '../index.css'
+import { Link } from 'react-router-dom'
 
 function Results({ images }) {
   if(!images.length){
@@ -8,20 +9,25 @@ function Results({ images }) {
   }
   // console.log(images.results[0].thumb)
   // Inside the onClick function is where you route the viewers to the sub component
-  const onClick = (event) => {
-    if(event.target.id === '1993487'){
-      console.log(true)
-    }else{
-      console.log(false)
-    }
-    console.log(event.target.id)
-  }
+  // const onClick = (event) => {
+  //   if(event.target.id === '1993487'){
+  //     console.log(true)
+  //   }else{
+  //     console.log(false)
+  //   }
+  //   console.log(event.target.id)
+  // }
   return (
     <div className='gallery'>
     {images.map((image) => (
-      <div key={image.id} className='image-results' >
-        <img onClick={onClick} src={image.thumb} id={image.id}/>
+      <Link to={`artists/${image.id}`} key={image.id}>
+      <div className='image-results' >
+        <img
+        src={image.thumb} 
+        id={image.id} 
+        />
       </div>
+      </Link>
     ))}
     </div>
   )

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { useSearchParams } from 'react-router-dom';
 import { Routes, Route, Link } from 'react-router-dom'
 import './App.css';
+import ArtistInfo from './components/ArtistInfo';
 import Home from './components/Home';
 import Results from './components/Results';
 import Search from './components/Search';
@@ -41,9 +42,20 @@ useEffect(() => {
 
   return (
     <div className="App">
-      <Search  searchArtist={searchArtist} setSearchArtist={setSearchArtist} getImages={getImages}/>
-      <Home />
-      <Results images={images} />
+      <header>
+      <Routes>
+        <Route path='/' element={<Home />} />
+      </Routes>
+      <Routes>
+        <Route path='/' element={ <Search searchArtist={searchArtist} setSearchArtist={setSearchArtist} getImages={getImages}/>} />
+      </Routes>
+      </header>
+      <Routes>
+        <Route path='/' element={<Results images={images} />}/>
+      </Routes>
+      <Routes>
+        <Route path='artists/:id' element={<ArtistInfo />} />
+      </Routes>
     </div>
   );
 }
