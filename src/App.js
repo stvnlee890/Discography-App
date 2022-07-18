@@ -44,14 +44,12 @@ useEffect(() => {
     <div className="App">
       <header>
         <h1>
-       <Link to='/'>Home</Link>
+       <Link to='/' style={{textDecoration: 'none'}}>Home</Link>
         </h1>
        <Search searchArtist={searchArtist} setSearchArtist={setSearchArtist} getImages={getImages}/>
       </header>
       <Routes>
         <Route path='/' element={<Home />} />
-      </Routes>
-      <Routes>
         <Route path='results/' element={<Results images={images} />}/>
         <Route path='artists/:id' element={<ArtistInfo images={images} searchArtist={searchArtist}/>} />
       </Routes>

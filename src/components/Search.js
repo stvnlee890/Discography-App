@@ -13,7 +13,7 @@ let navigate = useNavigate();
     event.preventDefault();
     console.log(event.target.value)
     getImages();
-    navigate(`results?query=${searchArtist}`)
+    navigate(`results?query=${searchArtist}`);
   }
 
   return(

@@ -5,7 +5,10 @@ function ArtistInfo({ searchArtist }) {
   console.log(searchArtist)
   return(
     <div>
-     <p>{searchArtist}</p>
+      <h1>
+      hello
+      {searchArtist}
+      </h1>
     </div>
   )
 }

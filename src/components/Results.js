@@ -1,9 +1,10 @@
 
 import React from "react";
 import '../index.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 function Results({ images, searchArtist }) {
+  let navigate = useNavigate()
   console.log(searchArtist)
   if(!images.length){
     return <h2>no images found!</h2>
@@ -21,7 +22,7 @@ function Results({ images, searchArtist }) {
   return (
     <div className='gallery'>
     {images.map((image) => (
-      <Link to={`artists/${image.id}`} key={image.id} style={{textDecoration: 'none'}}>
+      <Link to={`/artists/${image.id}`} key={image.id} style={{textDecoration: 'none'}}>
       <div className='image-results' >
         <img
         src={image.thumb} 
