@@ -7,8 +7,8 @@ import Results from './components/Results';
 import Search from './components/Search';
 
 function App() {
-  const[images, setImages] = useState([])
-  const[searchArtist, setSearchArtist] = useState('')
+  const[images, setImages] = useState([]);
+  const[searchArtist, setSearchArtist] = useState('');
 //  console.log(images)
   
   function getImages() {
@@ -26,7 +26,8 @@ function App() {
   fetch(url)
   .then(response => response.json())
   .then(response => {
-    setImages(response.results[0].thumb);
+    setImages(response.results);
+    //react renders after a fetch, and then sets the searchArtist state back to an empty string. 
     setSearchArtist('');
     console.log(response)
   })
