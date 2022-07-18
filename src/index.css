@@ -12,13 +12,25 @@ code {
     monospace;
 }
 
-.gallery{
+.gallery {
   display: flex;
   flex-wrap: wrap;
+  padding: 0 4px;
+  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+  align-items: stretch;
+  justify-items: center;
 }
-img {
-  height: 6rem;
-  margin: 0 0.5rem 0 0;
-  width: auto;
+.grid img {
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+  max-width: 100%;
+}
+
+.image-results {
   cursor: pointer;
+  max-width: 100%;
+  height: auto;
+  
 }
