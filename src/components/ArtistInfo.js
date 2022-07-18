@@ -10,3 +10,4 @@ function ArtistInfo({ images }) {
 }
 
 export default ArtistInfo;
+
