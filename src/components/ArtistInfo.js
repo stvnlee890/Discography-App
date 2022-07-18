@@ -1,4 +1,5 @@
-function ArtistInfo() {
+import { useState } from 'react'
+function ArtistInfo({ images }) {
   return(
     <div>
       <h3>
