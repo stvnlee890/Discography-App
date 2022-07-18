@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-function Home() {
+function Home({ setSearchArtist }) {
 return(
   <div>
     <h2>

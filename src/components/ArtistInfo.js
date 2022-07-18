@@ -1,10 +1,11 @@
-import { useState } from 'react'
-function ArtistInfo({ images }) {
+import React from "react";
+
+
+function ArtistInfo({ searchArtist }) {
+  console.log(searchArtist)
   return(
     <div>
-      <h3>
-        artist info page
-      </h3>
+     <p>{searchArtist}</p>
     </div>
   )
 }

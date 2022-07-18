@@ -46,18 +46,14 @@ useEffect(() => {
         <h1>
        <Link to='/'>Home</Link>
         </h1>
-      <Routes>
-        <Route path='/' element={ <Search searchArtist={searchArtist} setSearchArtist={setSearchArtist} getImages={getImages}/>} />
-      </Routes>
+       <Search searchArtist={searchArtist} setSearchArtist={setSearchArtist} getImages={getImages}/>
       </header>
-      {/* <Routes>
-        <Route path='/' element={<Home />} />
-      </Routes> */}
       <Routes>
-        <Route path='/' element={<Results images={images} />}/>
+        <Route path='/' element={<Home />} />
       </Routes>
       <Routes>
-        <Route path='artists/:id' element={<ArtistInfo images={images}/>} />
+        <Route path='results/' element={<Results images={images} />}/>
+        <Route path='artists/:id' element={<ArtistInfo images={images} searchArtist={searchArtist}/>} />
       </Routes>
     </div>
   );

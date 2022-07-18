@@ -3,7 +3,8 @@ import React from "react";
 import '../index.css'
 import { Link } from 'react-router-dom'
 
-function Results({ images }) {
+function Results({ images, searchArtist }) {
+  console.log(searchArtist)
   if(!images.length){
     return <h2>no images found!</h2>
   }
@@ -20,12 +21,14 @@ function Results({ images }) {
   return (
     <div className='gallery'>
     {images.map((image) => (
-      <Link to={`artists/${image.id}`} key={image.id}>
+      <Link to={`artists/${image.id}`} key={image.id} style={{textDecoration: 'none'}}>
       <div className='image-results' >
         <img
         src={image.thumb} 
         id={image.id} 
+        alt={searchArtist}
         />
+        <p>{image.title}</p>
       </div>
       </Link>
     ))}
