@@ -2,12 +2,13 @@ import React from "react";
 import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import ArtistProfile from "./ArtistInfo/ArtistProfile";
+import Discography from "./ArtistInfo/Discography";
 
 function ArtistInfo() {
   const[artistInformation, setArtistInformation] = useState()
   const token = process.env.REACT_APP_ACCESS_TOKEN;
 
-  let {artistId} = useParams()
+let {artistId} = useParams()
 useEffect(() => {
 console.log(artistId)
 
@@ -33,11 +34,10 @@ fetch(url, {
 console.log(artistInformation)
 return(
   <div>
-      <h1>Artist info</h1>
-      
+    <h1>Artist info</h1>
       {artistInformation ? <ArtistProfile artistInformation={artistInformation} /> : <p>loading</p> }
-
-    </div>
+    <Discography />
+  </div>
 
 
   )
