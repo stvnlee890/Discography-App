@@ -14,26 +14,29 @@ const searchOptions = {
   keyPath: '&key=',
   secretPath: '&secret=',
 }
-const discogUrl = 'https://api.discogs.com/artist/'
-const url = `${discogUrl}${artistId}{?sort,sort_order}`
+const discogUrl = 'https://api.discogs.com/artists/'
+const url = `${discogUrl}${artistId}`
 console.log(url)
 
 fetch(url)
 .then(response => response.json())
 .then(response => {
-  setArtistInformation(response.results);
+  setArtistInformation(response);
   //react renders after a fetch, and then sets the searchArtist state back to an empty string. 
   console.log(response)
 })
 .catch(console.error);
-
 }, [])
-
+console.log(artistInformation)
  return(
     <div>
       <h1>Artist info</h1>
-     
+       <p>Bio:
+        {artistInformation ? artistInformation.profile : <p> loading</p>}
+        </p>
     </div>
+
+
   )
 }
 
