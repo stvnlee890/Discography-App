@@ -1,10 +1,9 @@
 
-import React from "react";
+import React, { useEffect } from "react";
 import '../index.css'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
-function Results({ images, searchArtist }) {
-  let navigate = useNavigate()
+function Results({ images, searchArtist, setSearchParams }) {
   console.log(searchArtist)
   if(!images.length){
     return <h2>no images found!</h2>
@@ -29,6 +28,7 @@ function Results({ images, searchArtist }) {
         id={image.id} 
         alt={searchArtist}
         />
+        {/* {setSearchParams(image.id)} */}
         <p>{image.title}</p>
       </div>
       </Link>

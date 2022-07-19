@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useSearchParams } from 'react-router-dom';
-import { Routes, Route, Link } from 'react-router-dom'
+import { Routes, Route, Link  } from 'react-router-dom';
 import './App.css';
 import ArtistInfo from './components/ArtistInfo';
 import Home from './components/Home';
@@ -10,8 +9,8 @@ import Search from './components/Search';
 function App() {
   const[images, setImages] = useState([]);
   const[searchArtist, setSearchArtist] = useState('');
-//  console.log(images)
   
+ 
   function getImages() {
   const searchOptions = {
     key: process.env.REACT_APP_DISCOG_KEY,
@@ -22,7 +21,6 @@ function App() {
   const discogUrl = 'https://api.discogs.com/database/search?q='
   const url = `${discogUrl}${searchArtist}${searchOptions.keyPath}${searchOptions.key}${searchOptions.secretPath}${searchOptions.secret}`;
   console.log(url)
-
 
   fetch(url)
   .then(response => response.json())
@@ -46,12 +44,12 @@ useEffect(() => {
         <h1>
        <Link to='/' style={{textDecoration: 'none'}}>Home</Link>
         </h1>
-       <Search searchArtist={searchArtist} setSearchArtist={setSearchArtist} getImages={getImages}/>
+       <Search searchArtist={searchArtist} setSearchArtist={setSearchArtist} getImages={getImages} />
       </header>
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='results/' element={<Results images={images} />}/>
-        <Route path='artists/:id' element={<ArtistInfo images={images} searchArtist={searchArtist}/>} />
+        <Route path='results/' element={<Results images={images}  />}/>
+        <Route path='artists/:artistId' element={<ArtistInfo images={images} />} />
       </Routes>
     </div>
   );

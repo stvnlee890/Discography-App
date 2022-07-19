@@ -1,9 +1,10 @@
 
-import {  Link } from 'react-router-dom'
+
 import { useNavigate } from 'react-router-dom'
 
 
 function Search({ searchArtist, setSearchArtist, getImages }){
+
 let navigate = useNavigate();
   function handleChange(event) {
     console.log(event.target.value)
@@ -18,7 +19,7 @@ let navigate = useNavigate();
 
   return(
     <form onSubmit={handleSubmit} >
-    <input placeholder="search artist" type='text'  onChange={handleChange} value={searchArtist}>
+    <input placeholder="search artist" type='text' onChange={handleChange} value={searchArtist}>
     </input>
     <button type='submit' >
       search
