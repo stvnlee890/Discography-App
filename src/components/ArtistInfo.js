@@ -8,17 +8,15 @@ function ArtistInfo() {
 useEffect(() => {
 console.log(artistId)
 
-const searchOptions = {
-  key: process.env.REACT_APP_DISCOG_KEY,
-  secret: process.env.REACT_APP_DISCOG_SECRET,
-  keyPath: '&key=',
-  secretPath: '&secret=',
-}
 const discogUrl = 'https://api.discogs.com/artists/'
 const url = `${discogUrl}${artistId}`
 console.log(url)
 
-fetch(url)
+fetch(url, {
+  headers: {
+    'Accept': 'application/vnd.discogs.v2.plaintext+json'
+  }
+})
 .then(response => response.json())
 .then(response => {
   setArtistInformation(response);
@@ -27,13 +25,16 @@ fetch(url)
 })
 .catch(console.error);
 }, [])
+
+
 console.log(artistInformation)
- return(
-    <div>
+return(
+  <div>
       <h1>Artist info</h1>
-       <p>Bio:
-        {artistInformation ? artistInformation.profile : <p> loading</p>}
-        </p>
+        {/* <div dangerouslySetInnerHTML={{__html: artistInformation ? artistInformation.profile : <p> loading</p>}} /> */}
+        {artistInformation ? artistInformation.profile_plaintext : <p> loading</p>}
+      
+     
     </div>
 
 
