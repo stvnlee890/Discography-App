@@ -20,7 +20,7 @@ function App() {
   }
   const discogUrl = 'https://api.discogs.com/database/search?q='
   const url = `${discogUrl}${searchArtist}${searchOptions.keyPath}${searchOptions.key}${searchOptions.secretPath}${searchOptions.secret}`;
-  console.log(url)
+
 
   fetch(url)
   .then(response => response.json())
@@ -28,7 +28,7 @@ function App() {
     setImages(response.results);
     //react renders after a fetch, and then sets the searchArtist state back to an empty string. 
     setSearchArtist('');
-    console.log(response)
+
   })
   .catch(console.error);
 
@@ -51,6 +51,7 @@ useEffect(() => {
         <Route path='results/' element={<Results images={images}  />}/>
         <Route path='artists/:artistId' element={<ArtistInfo images={images} />} />
       </Routes>
+      
     </div>
   );
 }

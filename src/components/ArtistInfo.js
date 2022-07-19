@@ -1,9 +1,12 @@
 import React from "react";
 import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
+import ArtistProfile from "./ArtistInfo/ArtistProfile";
 
 function ArtistInfo() {
   const[artistInformation, setArtistInformation] = useState()
+  const token = process.env.REACT_APP_ACCESS_TOKEN;
+
   let {artistId} = useParams()
 useEffect(() => {
 console.log(artistId)
@@ -14,14 +17,14 @@ console.log(url)
 
 fetch(url, {
   headers: {
-    'Accept': 'application/vnd.discogs.v2.plaintext+json'
+    'Authorization': `Discogs token=${token}`,
+    'Accept': 'application/vnd.discogs.v2.html+json'
   }
 })
 .then(response => response.json())
 .then(response => {
   setArtistInformation(response);
   //react renders after a fetch, and then sets the searchArtist state back to an empty string. 
-  console.log(response)
 })
 .catch(console.error);
 }, [])
@@ -31,10 +34,9 @@ console.log(artistInformation)
 return(
   <div>
       <h1>Artist info</h1>
-        {/* <div dangerouslySetInnerHTML={{__html: artistInformation ? artistInformation.profile : <p> loading</p>}} /> */}
-        {artistInformation ? artistInformation.profile_plaintext : <p> loading</p>}
       
-     
+      {artistInformation ? <ArtistProfile artistInformation={artistInformation} /> : <p>loading</p> }
+
     </div>
 
 

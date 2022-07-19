@@ -27,7 +27,12 @@
 .App-link {
   color: #61dafb;
 }
-
+.profile-image {
+  width: 20%;
+}
+.bio {
+  color: orange
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
