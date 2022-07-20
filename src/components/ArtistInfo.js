@@ -4,7 +4,8 @@ import { useEffect, useState } from 'react'
 import ArtistProfile from "./ArtistInfo/ArtistProfile";
 import Discography from "./ArtistInfo/Discography";
 
-function ArtistInfo() {
+function ArtistInfo({ images }) {
+  console.log(images)
   const[artistInformation, setArtistInformation] = useState()
   const[error, setError] = useState(false)
   const token = process.env.REACT_APP_ACCESS_TOKEN;
@@ -15,7 +16,7 @@ console.log(artistId)
 
 const discogUrl = 'https://api.discogs.com/artists/'
 const url = `${discogUrl}${artistId}`
-console.log(url)
+// console.log(url)
 
 fetch(url, {
   headers: {
@@ -46,13 +47,7 @@ if(error){
     </div>
   )
 }
-if(!artistId){
-  return(
-    <div>
-      please try again
-    </div>
-  )
-}
+
 console.log(artistInformation)
 return(
   <div>

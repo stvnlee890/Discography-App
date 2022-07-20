@@ -34,13 +34,13 @@ code {
   box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
   max-width: 100%;
 }
-
 .image-results {
   cursor: pointer;
   max-width: 100%;
   height: auto;
   
 }
+
 
 .music-thumb {
   display: grid;

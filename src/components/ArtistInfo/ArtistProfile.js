@@ -1,10 +1,11 @@
 import '../../index.css'
 import React from 'react'
 function ArtistProfile({ artistInformation }) {
-  console.log(artistInformation)
+  // console.log(artistInformation)
   return(
     <div>
         {artistInformation.images ? <img className='profile-image' alt='profile-img' src={artistInformation.images[0].uri} />: null}
+
       <div>
         {artistInformation.name ? 
         <div>
@@ -13,8 +14,6 @@ function ArtistProfile({ artistInformation }) {
         </div>
         : null}
       </div>
-
-
 
       <div>
        {artistInformation.realname ? 

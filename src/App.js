@@ -9,7 +9,7 @@ import Search from './components/Search';
 function App() {
   const[images, setImages] = useState([]);
   const[searchArtist, setSearchArtist] = useState('');
-  
+
  
   function getImages() {
   const searchOptions = {
@@ -20,7 +20,7 @@ function App() {
   }
   const discogUrl = 'https://api.discogs.com/database/search?q='
   const url = `${discogUrl}${searchArtist}${searchOptions.keyPath}${searchOptions.key}${searchOptions.secretPath}${searchOptions.secret}`;
-
+  // console.log(url)
 
   fetch(url)
   .then(response => response.json())

@@ -6,7 +6,7 @@ function Search({ searchArtist, setSearchArtist, getImages }){
 
 let navigate = useNavigate();
   function handleChange(event) {
-    console.log(event.target.value)
+    // console.log(event.target.value)
     setSearchArtist(event.target.value);
   }
   function handleSubmit(event) {
