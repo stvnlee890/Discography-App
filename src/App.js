@@ -47,7 +47,7 @@ useEffect(() => {
        <Search searchArtist={searchArtist} setSearchArtist={setSearchArtist} getImages={getImages} />
       </header>
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<Home images={images} />} />
         <Route path='results/' element={<Results images={images}  />}/>
         <Route path='artists/:artistId' element={<ArtistInfo images={images} />} />
       </Routes>

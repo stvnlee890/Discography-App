@@ -12,11 +12,11 @@ function ArtistInfo({ images }) {
 
 let {artistId} = useParams()
 useEffect(() => {
-console.log(artistId)
+// console.log(artistId)
 
 const discogUrl = 'https://api.discogs.com/artists/'
 const url = `${discogUrl}${artistId}`
-// console.log(url)
+console.log(url)
 
 fetch(url, {
   headers: {
@@ -48,7 +48,7 @@ if(error){
   )
 }
 
-console.log(artistInformation)
+// console.log(artistInformation)
 return(
   <div>
     <h1>Artist info</h1>

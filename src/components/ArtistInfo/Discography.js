@@ -10,7 +10,7 @@ function Discography(){
   const[releases, setReleases] = useState()
   const[error, setError] = useState(false)
   const[count, setCount] = useState(1)
-  console.log(count)
+
   // const[page, setPage] = useState()
   // console.log(page)
   // const nextUrl = `https://api.discogs.com/artists/${artistId}/releases?page=2&per_page=10`
@@ -39,10 +39,9 @@ function Discography(){
     })
     .catch(console.error);
  
-    console.log('component update')
   }
 
-  console.log(releases)
+console.log(releases)
 
   useEffect(() => {
     getReleaseApi()

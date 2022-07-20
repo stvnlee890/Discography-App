@@ -1,11 +1,17 @@
 import { Link } from 'react-router-dom'
-function Home({ setSearchArtist }) {
+
+function Home({ images }) {
+console.log(images)
+
 return(
-  <div>
-    <h2>
-      Home
-    </h2>
+  <div className='cover-image-container'>
+    {images.slice(1, 23).map((coverImage, index) => (
+      <div className='cover-image' key={index}>
+      {coverImage ? <img className='home-image'  alt='cover-img' src={coverImage.cover_image} />: null}
+      </div>
+    ))}
   </div>
+ 
 )
 }
 
