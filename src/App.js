@@ -7,8 +7,10 @@ import Results from './components/Results';
 import Search from './components/Search';
 
 function App() {
+  
   const[images, setImages] = useState([]);
   const[searchArtist, setSearchArtist] = useState('');
+  const token = process.env.REACT_APP_ACCESS_TOKEN;
 
  
   function getImages() {
@@ -47,11 +49,10 @@ useEffect(() => {
        <Search searchArtist={searchArtist} setSearchArtist={setSearchArtist} getImages={getImages} />
       </header>
       <Routes>
-        <Route path='/' element={<Home images={images} />} />
+        <Route path='/' element={<Home images={images} token={token} />} />
         <Route path='results/' element={<Results images={images}  />}/>
-        <Route path='artists/:artistId' element={<ArtistInfo images={images} />} />
+        <Route path='artists/:artistId' element={<ArtistInfo images={images} token={token}/>} />
       </Routes>
-      
     </div>
   );
 }

@@ -4,11 +4,11 @@ import { useEffect, useState } from 'react'
 import ArtistProfile from "./ArtistInfo/ArtistProfile";
 import Discography from "./ArtistInfo/Discography";
 
-function ArtistInfo({ images }) {
+function ArtistInfo({ images, token }) {
   console.log(images)
   const[artistInformation, setArtistInformation] = useState()
   const[error, setError] = useState(false)
-  const token = process.env.REACT_APP_ACCESS_TOKEN;
+  // const token = process.env.REACT_APP_ACCESS_TOKEN;
 
 let {artistId} = useParams()
 useEffect(() => {
@@ -53,7 +53,7 @@ return(
   <div>
     <h1>Artist info</h1>
       {artistInformation ? <ArtistProfile artistInformation={artistInformation} /> : <p>loading</p> }
-    <Discography />
+    <Discography artistId={artistId}/>
   </div>
 
 

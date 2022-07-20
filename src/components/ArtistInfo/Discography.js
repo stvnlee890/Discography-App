@@ -1,9 +1,9 @@
-import { useParams } from 'react-router-dom'
+// import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
-function Discography(){
+function Discography({ artistId }){
   
-  let {artistId} = useParams()
+  // let {artistId} = useParams()
   const token = process.env.REACT_APP_ACCESS_TOKEN;
   const discogUrl = 'https://api.discogs.com/artists/'
 
