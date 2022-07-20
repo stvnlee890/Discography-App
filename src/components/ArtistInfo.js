@@ -6,6 +6,7 @@ import Discography from "./ArtistInfo/Discography";
 
 function ArtistInfo() {
   const[artistInformation, setArtistInformation] = useState()
+  const[error, setError] = useState(false)
   const token = process.env.REACT_APP_ACCESS_TOKEN;
 
 let {artistId} = useParams()
@@ -22,7 +23,13 @@ fetch(url, {
     'Accept': 'application/vnd.discogs.v2.html+json'
   }
 })
-.then(response => response.json())
+.then(response => {
+  if(response.status === 404){
+    return setError(true)
+  }
+  return response.json()
+  
+}) 
 .then(response => {
   setArtistInformation(response);
   //react renders after a fetch, and then sets the searchArtist state back to an empty string. 
@@ -30,7 +37,22 @@ fetch(url, {
 .catch(console.error);
 }, [])
 
-
+if(error){
+  return(
+    <div>
+      <h4>
+        please try a different search
+      </h4>
+    </div>
+  )
+}
+if(!artistId){
+  return(
+    <div>
+      please try again
+    </div>
+  )
+}
 console.log(artistInformation)
 return(
   <div>
