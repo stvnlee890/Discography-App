@@ -41,7 +41,7 @@ function Discography({ artistId }){
  
   }
 
-console.log(releases)
+
 
   useEffect(() => {
     getReleaseApi()

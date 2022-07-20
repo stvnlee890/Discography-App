@@ -5,7 +5,7 @@ import ArtistProfile from "./ArtistInfo/ArtistProfile";
 import Discography from "./ArtistInfo/Discography";
 
 function ArtistInfo({ images, token }) {
-  console.log(images)
+
   const[artistInformation, setArtistInformation] = useState()
   const[error, setError] = useState(false)
   // const token = process.env.REACT_APP_ACCESS_TOKEN;
@@ -29,15 +29,16 @@ fetch(url, {
     return setError(true)
   }
   return response.json()
-  
 }) 
 .then(response => {
   setArtistInformation(response);
+  console.log(response)
   //react renders after a fetch, and then sets the searchArtist state back to an empty string. 
 })
 .catch(console.error);
-}, [])
 
+}, [])
+console.log(artistInformation)
 if(error){
   return(
     <div>

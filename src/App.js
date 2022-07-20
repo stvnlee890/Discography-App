@@ -24,13 +24,22 @@ function App() {
   const url = `${discogUrl}${searchArtist}${searchOptions.keyPath}${searchOptions.key}${searchOptions.secretPath}${searchOptions.secret}`;
   // console.log(url)
 
-  fetch(url)
+  fetch(url, {
+    headers: {
+      'Authorization': `Discogs token=${token}`,
+      'Accept': 'application/vnd.discogs.v2.html+json'
+    }
+  })
   .then(response => response.json())
   .then(response => {
-    setImages(response.results);
+    const artistType = response.results.filter((artist) => artist.type === 'artist' );
+    setImages(artistType)
+
+    // setImages(response.results);
     //react renders after a fetch, and then sets the searchArtist state back to an empty string. 
     setSearchArtist('');
-
+    // console.log(images)
+    // console.log(images.type)
   })
   .catch(console.error);
 
