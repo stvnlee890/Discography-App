@@ -4,8 +4,8 @@ import { useParams } from 'react-router-dom'
 
 function Home({ images, token }) {
 
-const[homeImage, setHomeImage] = useState('')
-
+// const[homeImage, setHomeImage] = useState('')
+// let randomId = Math.floor(Math.random() * 1000)
 // console.log(randomId)
 // const discogUrl = 'https://api.discogs.com/artists/'
 // const url = `${discogUrl}${randomId}`
@@ -28,15 +28,19 @@ const[homeImage, setHomeImage] = useState('')
 // .catch(console.error);
 // }, [])
 // console.log(homeImage)
+console.log(images)
 return(
 
   // <div className='cover-image-container'>
+  //   <h1>home</h1>
   //   {images.slice(1, 15).map((coverImage, index) => (
   //     <div className='cover-image' key={index}>
-  //     {coverImage ? <img className='home-image'  alt='cover-img' src={coverImage.cover_image} />: null}
+  //     {coverImage ? 
+  //     <img onClick={(event) => console.log(event.target)} key={id} className='home-image'  alt='cover-img' src={coverImage.cover_image} />: null}
   //     </div>
   //   ))}
   // </div>
+  
   <div>
  
   </div>

@@ -4,7 +4,8 @@ import { useEffect, useState } from 'react'
 import ArtistProfile from "./ArtistInfo/ArtistProfile";
 import Discography from "./ArtistInfo/Discography";
 
-function ArtistInfo({ images, token }) {
+
+function ArtistInfo({ token }) {
 
   const[artistInformation, setArtistInformation] = useState()
   const[error, setError] = useState(false)
@@ -12,7 +13,7 @@ function ArtistInfo({ images, token }) {
 
 let {artistId} = useParams()
 useEffect(() => {
-// console.log(artistId)
+console.log(artistId)
 
 const discogUrl = 'https://api.discogs.com/artists/'
 const url = `${discogUrl}${artistId}`
@@ -51,10 +52,13 @@ if(error){
 
 // console.log(artistInformation)
 return(
-  <div>
-    <h1>Artist info</h1>
+  <div className="artist-info-container">
+    <h1 className="artist-info-header" >
+    </h1>
       {artistInformation ? <ArtistProfile artistInformation={artistInformation} /> : <p>loading</p> }
+    <h5>
     <Discography artistId={artistId}/>
+    </h5>
   </div>
 
 

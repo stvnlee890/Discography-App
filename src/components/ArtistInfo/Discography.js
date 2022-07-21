@@ -1,6 +1,7 @@
 // import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
+
 function Discography({ artistId }){
   
   // let {artistId} = useParams()
@@ -64,9 +65,9 @@ function Discography({ artistId }){
       <div>
         {releases ? releases.releases.map((music, index) => (
           <div key={index} className='music-thumb'>
-            <img src={music.thumb} alt='source' />
-            <h5>{music.title}</h5>
-            <h5>{music.artist}</h5>
+            <img className='discog-thumb-img' src={music.thumb} alt='source' />
+            <div className='discog-music-title' >{music.title}</div>
+            <div className='discog-artist-name'>{music.artist}</div>
         </div>
       )) :<p>loading</p>}
       </div>
@@ -74,7 +75,7 @@ function Discography({ artistId }){
         {releases ? releases.pagination.page + ' out of ' + releases.pagination.pages : <p>loading</p>}
       </div>
       <button onClick={()=> setCount((prev) => prev > 1 ? prev - 1 : 1)}>Previous</button>
-      <button onClick={()=> setCount((prev) => prev < releases.pagination.pages ? prev + 1 : releases.pagination.pages)}>Next</button>
+      <button onClick={()=> setCount((prev) => prev < 50 ? prev + 1 : 50)}>Next</button>
     </div>
   )
 }

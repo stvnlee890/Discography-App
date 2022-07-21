@@ -1,10 +1,11 @@
 
 import { useNavigate } from 'react-router-dom'
-
+import '../App.css';
 
 function Search({ searchArtist, setSearchArtist, getImages }){
 
 let navigate = useNavigate();
+
   function handleChange(event) {
     // console.log(event.target.value)
     setSearchArtist(event.target.value);

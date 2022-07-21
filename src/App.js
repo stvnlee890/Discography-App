@@ -51,17 +51,19 @@ useEffect(() => {
 
   return (
     <div className="App">
-      <header>
+      <nav className='navigation' >
         <h1>
        <Link to='/' style={{textDecoration: 'none'}}>Home</Link>
         </h1>
        <Search searchArtist={searchArtist} setSearchArtist={setSearchArtist} getImages={getImages} />
-      </header>
+      </nav>
+      <main className='main-page'>
       <Routes>
         <Route path='/' element={<Home images={images} token={token} />} />
         <Route path='results/' element={<Results images={images}  />}/>
         <Route path='artists/:artistId' element={<ArtistInfo images={images} token={token}/>} />
       </Routes>
+      </main>
     </div>
   );
 }

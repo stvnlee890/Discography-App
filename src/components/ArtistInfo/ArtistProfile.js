@@ -1,54 +1,67 @@
 import '../../index.css'
 import React from 'react'
+
+
 function ArtistProfile({ artistInformation }) {
   // console.log(artistInformation)
-  return(
-    <div>
-        {artistInformation.images ? <img className='profile-image' alt='profile-img' src={artistInformation.images[0].uri} />: null}
 
-      <div>
-        {artistInformation.name ? 
-        <div>
-          <h3>Name</h3>
-          {artistInformation.name}
+  const bioRender = {};
+
+
+  return(
+    <div className='artist-profile-container'>
+
+        {artistInformation.images ? 
+      <div className='artist-profile-image' >
+        <img className='profile-image' alt='profile-img' src={artistInformation.images[0].uri} />
+      </div>:null}
+      
+      <div className='artist-name-container'>
+
+      {artistInformation.name ? 
+        <div className='artist-name'>
+          <h3 className='artist-info-name'>{artistInformation.name}</h3>
         </div>
         : null}
-      </div>
 
-      <div>
        {artistInformation.realname ? 
-        <div>
-          <h3>
-            Real Name
-          </h3>
-          {artistInformation.realname} 
-        </div>
-          :null}
-      </div>
-  
+      <div className='artist-name'>
+        <h3>Real Name</h3>
+        <span>{artistInformation.realname}</span>
+      </div> :null}
+
+     <div className='artist-name'>
       {artistInformation.aliases ? 
         [<h3>Aliases</h3>,
         artistInformation.aliases.map((aliases, index) => (
-        <div key={index} >
-          {aliases.name}
-        </div>
-        ))] : null}
-     
-      <h3>
-        Bio
-      </h3>
+        <span key={index}>
+          {` ${aliases.name}|`}
+        </span>
+        ))]: null}
+     </div>
+      </div>
+  
+      {artistInformation.profile_html ? 
+      <div className='bio-container'>
+        <p className='p-tag-bio'>About {artistInformation.name}</p>
+          <span 
+          className='bio' 
+          dangerouslySetInnerHTML={{__html: `<p>${artistInformation.profile_html}</ p>`}} 
+          ></span>
+        </div> : null}
 
-      <div className='bio' dangerouslySetInnerHTML={{__html: `<p>${artistInformation.profile_html}</p>`}} />
 
-      <div>
+      <div className='url'>
         {artistInformation.urls ? 
-        [<h3>URL</h3>,
+        [<h3 className='h3-url' >URL</h3>,
         artistInformation.urls.map((nameVar, index)=>(
-          <div key={index}>
-          {nameVar}</div>
+          <ul>
+            <li key={index}>
+            <a className='a-tag-url' href={nameVar}>{nameVar}</a>
+          </li>
+          </ul>
           ))] : null}
       </div>
-
     </div>
   )
 }
