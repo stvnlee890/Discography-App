@@ -53,12 +53,11 @@ if(error){
 // console.log(artistInformation)
 return(
   <div className="artist-info-container">
-    <h1 className="artist-info-header" >
-    </h1>
+
       {artistInformation ? <ArtistProfile artistInformation={artistInformation} /> : <p>loading</p> }
-    <h5>
+    <div className="discog-main-container">
     <Discography artistId={artistId}/>
-    </h5>
+    </div>
   </div>
 
 

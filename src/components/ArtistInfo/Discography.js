@@ -21,7 +21,7 @@ function Discography({ artistId }){
   
   
   function getReleaseApi () {
-    fetch(`${discogUrl}${artistId}/releases?page=${count}&per_page=5`, {
+    fetch(`${discogUrl}${artistId}/releases?page=${count}&per_page=10`, {
       headers: {
         'Authorization': `Discogs token=${token}`,
         'Accept': 'application/vnd.discogs.v2.html+json'
@@ -41,9 +41,6 @@ function Discography({ artistId }){
     .catch(console.error);
  
   }
-
-
-
   useEffect(() => {
     getReleaseApi()
   }, [count])
@@ -58,24 +55,30 @@ function Discography({ artistId }){
     )
   }
   return(
-    <div>
-      <h1>
-      discography component
-      </h1>
-      <div>
+    <div className='discog-container' >
+      <h3 className='discog-releases'>
+      Releases
+      </h3>
+      <div className='thumbnail-container'>
         {releases ? releases.releases.map((music, index) => (
           <div key={index} className='music-thumb'>
-            <img className='discog-thumb-img' src={music.thumb} alt='source' />
-            <div className='discog-music-title' >{music.title}</div>
-            <div className='discog-artist-name'>{music.artist}</div>
+            <div className='discog-thumb'>
+              <img className='discog-thumb-img' src={music.thumb} alt='source' />
+            </div>
+            <div className='discog-info'>
+              <div className='discog-music-title' >{music.title}</div>
+              <div className='discog-artist-name'>{music.artist}</div>
+            </div>
         </div>
       )) :<p>loading</p>}
-      </div>
-      <div>
+      <div className='discog-page-release' >
         {releases ? releases.pagination.page + ' out of ' + releases.pagination.pages : <p>loading</p>}
       </div>
-      <button onClick={()=> setCount((prev) => prev > 1 ? prev - 1 : 1)}>Previous</button>
-      <button onClick={()=> setCount((prev) => prev < 50 ? prev + 1 : 50)}>Next</button>
+      <div className='button-container'>
+      <button className='discog-button prev' onClick={()=> setCount((prev) => prev > 1 ? prev - 1 : 1)}>Previous</button>
+      <button className='discog-button next' onClick={()=> setCount((prev) => prev < 50 ? prev + 1 : 50)}>Next</button>
+      </div>
+      </div>
     </div>
   )
 }

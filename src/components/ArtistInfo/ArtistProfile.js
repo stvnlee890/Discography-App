@@ -34,7 +34,7 @@ function ArtistProfile({ artistInformation }) {
       {artistInformation.aliases ? 
         [<h3>Aliases</h3>,
         artistInformation.aliases.map((aliases, index) => (
-        <span key={index}>
+        <span className='artist-aliases' key={index}>
           {` ${aliases.name}|`}
         </span>
         ))]: null}
