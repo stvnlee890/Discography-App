@@ -1,7 +1,5 @@
 
 import React, { useEffect } from "react";
-import '../index.css'
-import '../App.css';
 import { Link } from 'react-router-dom'
 
 function Results({ images, searchArtist }) {
@@ -21,17 +19,17 @@ function Results({ images, searchArtist }) {
   // }
  
   return (
-    <div className='gallery'>
+    <>
     {images.map((image) => (
-      <Link to={`/artists/${image.id}`} key={image.id} style={{textDecoration: 'none'}}>
+      <Link className="results-link-tag" to={`/artists/${image.id}`} key={image.id} style={{textDecoration: 'none'}}>
       <div className='image-results' >
         <img className="image-thumbnail"
         src={image.thumb} 
         id={image.id} 
         alt={searchArtist}
         />
-        <p>{image.title}</p>
       </div>
+      <p className="img-results-title">{image.title}</p>
       </Link>
     ))}
        
@@ -45,7 +43,7 @@ function Results({ images, searchArtist }) {
         <p>{images[0].title}</p>
       </div>
       </Link> */}
-    </div>
+    </>
   )
 }
 

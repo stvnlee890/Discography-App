@@ -65,14 +65,15 @@ function Discography({ artistId }){
         {releases ? releases.releases.map((music, index) => (
           <div key={index} className='music-thumb'>
             <div className='discog-thumb'>
-              <img className='discog-thumb-img' src={music.thumb} alt='source' />
+              <img className='discog-thumb-img' src={music.thumb ? music.thumb : ''} alt='source' />
+              
             </div>
             <div className='discog-info'>
               <div className='discog-music-title' >{music.title}</div>
               <div className='discog-artist-name'>{music.artist}</div>
             </div>
         </div>
-      )) :<p>loading</p>}
+      )) : null}
       </div>
       <div className='discog-page-release' >
         {releases ? releases.pagination.page + ' out of ' + releases.pagination.pages : <p>loading</p>}

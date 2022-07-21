@@ -5,6 +5,7 @@
 }
 #root {
   width: 100vw;
+  height: 100vh;
 }
 
 
@@ -25,7 +26,7 @@
   color: white;
 } */
 .navigation {
-background: #3a3c3d;
+
 padding: 10px
 }
 h1 {
@@ -54,23 +55,29 @@ h1 {
 
 /* ARTIST PROFILE COMPONENT */
 /*  */
-.profile-image {
-  display: block;
-  width: 20%;
-  height: auto;
-  padding: 20px 20px 20px 20px;
-}
 
 
 @media (max-width: 480px) {
-  
+
   .App {
     font-size: 10px;
     max-width: 100vw;
   }
- 
-
+  
+  
   /* ARTIST PROFILE COMPONENT*/
+  .artist-profile-image {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 20px 3fr 20px;
+  }
+  .profile-image {
+    width: 20%;
+    height: auto;
+    padding: 20px 20px 20px 20px;
+    margin: 0;
+    grid-column: 2 / span 1;
+  }
   .artist-info-container {
     /* display: flex;
     flex-wrap: wrap; */
@@ -97,7 +104,6 @@ h1 {
   }
  
   .artist-name.stage{
-    padding-top:20px;
     flex-wrap: wrap;
     grid-column: 2 / span 1;
     border-top: 1px solid #686869; 
@@ -107,7 +113,7 @@ h1 {
  }
   .artist-info-name {
     font-size: 18px;
-    padding: 10px 0px 10px 0px;
+    padding: 20px 0px 30px 0px
   }
   h3{
     margin: 0;
@@ -127,8 +133,9 @@ h1 {
     grid-column: 2 / span 1;
   }
   p {
-    padding: 0px 20px 10px 20px;
+    padding-bottom: 10px;
     grid-column: 2 / span 1;
+    color: white;
   }
   a {
     text-decoration: none;
@@ -140,6 +147,7 @@ h1 {
     font-size: 14px;
     padding-top: 20px;
     border-top: 1px solid #686869; 
+    font-weight: bold;
   }
 
 /* URL LINKS*/
@@ -241,6 +249,13 @@ h1 {
   .discog-music-title {
     font-weight: 600;
   }
+  .empty-image {
+    width: 20%;
+    height: auto;
+    padding: 20px 20px 20px 20px;
+    margin: 0;
+    grid-column: 2 / span 1;
+  }
   /* artist profile buttons*/
   .discog-page-release {
     margin: 10px;
@@ -259,5 +274,20 @@ h1 {
     margin-left: 10px;
     margin-bottom: 10px
   }
+
+  /* RESULTS PAGE*/
+
+.image-results {
+  display: grid;
+  grid-template-rows: 1fr 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.img-thumbnail {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.25em;
+  padding: 0.25em;
+  flex: 1;
+
+}
 
 }
