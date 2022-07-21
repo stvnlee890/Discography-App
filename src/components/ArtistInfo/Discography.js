@@ -56,9 +56,11 @@ function Discography({ artistId }){
   }
   return(
     <div className='discog-container' >
-      <h3 className='discog-releases'>
-      Releases
-      </h3>
+      <div className='discog-releases-container'>
+        <h3 className='discog-releases'>
+        Releases
+        </h3>
+      </div>
       <div className='thumbnail-container'>
         {releases ? releases.releases.map((music, index) => (
           <div key={index} className='music-thumb'>
@@ -71,13 +73,13 @@ function Discography({ artistId }){
             </div>
         </div>
       )) :<p>loading</p>}
+      </div>
       <div className='discog-page-release' >
         {releases ? releases.pagination.page + ' out of ' + releases.pagination.pages : <p>loading</p>}
       </div>
       <div className='button-container'>
       <button className='discog-button prev' onClick={()=> setCount((prev) => prev > 1 ? prev - 1 : 1)}>Previous</button>
       <button className='discog-button next' onClick={()=> setCount((prev) => prev < 50 ? prev + 1 : 50)}>Next</button>
-      </div>
       </div>
     </div>
   )
