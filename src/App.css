@@ -1,3 +1,4 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
 .App {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: white;
@@ -195,7 +196,7 @@ h1 {
   .thumbnail-container {
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 20px 3fr 20px;
+    grid-template-columns: 20px 3fr 3fr 20px;
     background: #3a3c3d;
     margin-bottom: 5px;
   }
@@ -230,18 +231,25 @@ h1 {
   .discog-info {
     background-color:#3a3c3d;
     margin-left: 30px;
+    display: grid
   }
   .discog-music-title {
     font-size: 12px;
     font-weight: normal;
     color: #ecedc5;
     font-family: 'Chivo', sans-serif;
+
   }
   .discog-artist-name {
     font-size: 12px;
     font-family: 'Chivo', sans-serif;
     color: white;
+    padding-bottom: 10px
 
+  }
+  .discog-thumb {
+    display: grid;
+    padding-bottom: 10px;
   }
   .discog-thumb-img {
     width: 70px;
@@ -277,17 +285,56 @@ h1 {
 
   /* RESULTS PAGE*/
 
-.image-results {
+/* .image-results {
   display: grid;
   grid-template-rows: 1fr 20px;
   grid-template-columns: 1fr 1fr 1fr;
-}
+} */
+.g-4 {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  /* display: grid;
+  grid-template-rows: 1fr 20px;
+  grid-template-columns: 1fr 1fr 1fr; */
+};
+
 .img-thumbnail {
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.25em;
-  padding: 0.25em;
+  /* padding: 0.25em;
   flex: 1;
+  height: 100px;
+  width: 200px; */
+  height: 250px;
+  width: 180px;
+  /* object-fit: cover; */
+}
+.results-col {
+  width: 120px;
+}
+.h-100 {
+  border: none;
+  background-color: transparent;
+}
+.results-footer {
+  margin-bottom: 10px;
+}
+/* .image-results {
 
 }
+.image-thumbnail {
+  flex-wrap: wrap;
+}
+.h-100 {
+  display: flex;
+  width: 100px;
+}
+.h-100.card {
+  display: grid;
+  margin-left: 100px;
+}
+.results-card-text {
+  background-color: transparent;
+} */
+
 
 }

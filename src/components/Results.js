@@ -1,6 +1,11 @@
 
 import React, { useEffect } from "react";
 import { Link } from 'react-router-dom'
+import Card from 'react-bootstrap/Card';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import Button from 'react-bootstrap/Container'
 
 function Results({ images, searchArtist }) {
   console.log(searchArtist)
@@ -19,31 +24,62 @@ function Results({ images, searchArtist }) {
   // }
  
   return (
-    <>
-    {images.map((image) => (
-      <Link className="results-link-tag" to={`/artists/${image.id}`} key={image.id} style={{textDecoration: 'none'}}>
-      <div className='image-results' >
-        <img className="image-thumbnail"
-        src={image.thumb} 
-        id={image.id} 
-        alt={searchArtist}
-        />
-      </div>
-      <p className="img-results-title">{image.title}</p>
+    <Container>
+      <Row xs={1} md={2} lg={3} xl={4} className='g-4'>
+   {images.map((image) => (
+      <Col className='results-col results-footer' key={image.id}>
+        <Link className="results-link-tag" to={`/artists/${image.id}`} style={{textDecoration: 'none'}}>
+        <Card className='h-100'  >
+          <div className='image-results' >
+          <Card.Img className="image-thumbnail"
+            src={image.thumb} 
+            id={image.id} 
+            alt={searchArtist}
+          />
+          
+        </div>
+       </Card>
+       <Card.Body>
+        <Card.Footer >{image.title}
+        </Card.Footer>
+       </Card.Body>
       </Link>
-    ))}
+      </Col>
+    ))} 
        
-      {/* <Link to={`/artists/${images[0].id}`} key={images.id} style={{textDecoration: 'none'}}>
-      <div className='image-results' >
-        <img className="image-thumbnail"
-        src={images[0].thumb} 
-        id={images[0].id} 
-        alt={searchArtist}
-        />
-        <p>{images[0].title}</p>
-      </div>
-      </Link> */}
-    </>
+
+      {/* <Container>
+    <Row xs={1} md={2} lg={3} xl={4} className='g-4'>
+    {images.map((image) => {
+            return(
+     <Col key={image.id}>
+            <Card className='h-100'  >
+                {image.thumb && (
+               <Card.Img
+                variant='top'
+                src={image.thumb ? image.thumb : ''}
+                alt={image.id}
+            />
+        )}
+        <Card.Body>
+            {image.thumb ? (
+                ''
+            ) : (
+                <Card.Title>No Image Available</Card.Title>
+            )}
+            <Card.Text className='results-card-text'>{image.title}</Card.Text>
+        </Card.Body>
+        <Card.Footer>
+            <Button>test</Button>
+        </Card.Footer>
+    </Card>
+                   </Col>
+            )
+        })}
+        </Row>
+    </Container> */}
+    </Row>
+    </Container>
   )
 }
 

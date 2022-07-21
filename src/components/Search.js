@@ -13,7 +13,7 @@ let navigate = useNavigate();
   function handleSubmit(event) {
     event.preventDefault();
     console.log(event.target.value)
-   getImages(); 
+    getImages(); 
     navigate(`results?query=${searchArtist}`);
   }
 

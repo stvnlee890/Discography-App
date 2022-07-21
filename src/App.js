@@ -32,9 +32,9 @@ function App() {
   })
   .then(response => response.json())
   .then(response => {
+    console.log(response)
     const artistType = response.results.filter((artist) => artist.type === 'artist' );
     setImages(artistType)
-
     // setImages(response.results);
     //react renders after a fetch, and then sets the searchArtist state back to an empty string. 
     setSearchArtist('');
@@ -42,7 +42,7 @@ function App() {
     // console.log(images.type)
   })
   .catch(console.error);
-
+  
 }
 
 useEffect(() => {

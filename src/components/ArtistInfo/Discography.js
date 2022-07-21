@@ -65,7 +65,7 @@ function Discography({ artistId }){
         {releases ? releases.releases.map((music, index) => (
           <div key={index} className='music-thumb'>
             <div className='discog-thumb'>
-              <img className='discog-thumb-img' src={music.thumb ? music.thumb : ''} alt='source' />
+              <img className='discog-thumb-img' src={music.thumb ? music.thumb : null} alt='source' />
               
             </div>
             <div className='discog-info'>
