@@ -1,6 +1,7 @@
 .App {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: white;
+  background-color: #3a3c3d;
 }
 #root {
   width: 100vw;
@@ -90,14 +91,20 @@ h1 {
     width: 100vw;
     background: #3a3c3d;
     text-align: center;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 20px 3fr 20px;
   }
  
-  .artist-name {
+  .artist-name.stage{
+    padding-top:20px;
     flex-wrap: wrap;
+    grid-column: 2 / span 1;
+    border-top: 1px solid #686869; 
   }
-  .artist-name{
-    padding-bottom: 5px;
-  }
+ .artist-name {
+  grid-column: 2 / span 1;
+ }
   .artist-info-name {
     font-size: 18px;
     padding: 10px 0px 10px 0px;
@@ -110,13 +117,18 @@ h1 {
     background-color: #3a3c3d;
     width: 100vw;
     margin-top: 10px;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 20px 3fr 20px;
   }
   .bio {
     /* width: 100%; */
     text-align: left;
+    grid-column: 2 / span 1;
   }
   p {
-    padding: 0px 20px 10px 20px
+    padding: 0px 20px 10px 20px;
+    grid-column: 2 / span 1;
   }
   a {
     text-decoration: none;
@@ -126,10 +138,16 @@ h1 {
   .p-tag-bio {
     text-align: center;
     font-size: 14px;
-    padding-top: 20px
+    padding-top: 20px;
+    border-top: 1px solid #686869; 
   }
 
 /* URL LINKS*/
+.url-container {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 20px 3fr 20px;
+}
   .url {
     background-color: #3a3c3d;
     margin-top: 10px;
@@ -137,11 +155,14 @@ h1 {
   }
   ul {
     list-style: none;
-    padding-left: 20px;
-    padding-bottom: 10px;
+    display: grid;
+    padding: 0;
+    grid-template-rows: 1fr;
+    grid-template-columns: 20px 3fr 20px;
   }
   li {
     display: flex;
+    grid-column: 2 / span 1;
   }
   .a-tag-url {
     display: block;
@@ -156,13 +177,13 @@ h1 {
   }
   .h3-url {
     text-align: center;
-    padding-top: 10px
+    border-top: 1px solid #686869; 
+    grid-column: 2 / span 1;
+    padding-top: 20px;
   }
 
   /*DISCOGRAPHY*/
-  .discog-container {
 
-  }
   .thumbnail-container {
     display: grid;
     grid-template-rows: 1fr;
@@ -205,7 +226,7 @@ h1 {
   .discog-music-title {
     font-size: 12px;
     font-weight: normal;
-    color: #f1f2d8;
+    color: #ecedc5;
     font-family: 'Chivo', sans-serif;
   }
   .discog-artist-name {

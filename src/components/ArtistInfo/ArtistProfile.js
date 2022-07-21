@@ -19,7 +19,7 @@ function ArtistProfile({ artistInformation }) {
       <div className='artist-name-container'>
 
       {artistInformation.name ? 
-        <div className='artist-name'>
+        <div className='artist-name stage'>
           <h3 className='artist-info-name'>{artistInformation.name}</h3>
         </div>
         : null}
@@ -53,7 +53,10 @@ function ArtistProfile({ artistInformation }) {
 
       <div className='url'>
         {artistInformation.urls ? 
-        [<h3 className='h3-url' >URL</h3>,
+        [
+        <div className='url-container'>
+          <h3 className='h3-url' >URL</h3>
+        </div>,
         artistInformation.urls.map((nameVar, index)=>(
           <ul>
             <li key={index}>
