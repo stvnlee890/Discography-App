@@ -4,6 +4,9 @@ This project is a music discography application where you can search your favori
 
 <img width="1012" alt="Screen Shot 2022-07-22 at 12 53 06 AM" src="https://user-images.githubusercontent.com/106281820/180391767-e6f193ea-dc7a-4257-bed2-fde0dff85131.png">
 
+Here's a the link to my app
+https://music-discography.netlify.app 
+
 ## MVP GOALS 
 
 1.	Create an input field that will fetch the specified artist from the Discogs API.
