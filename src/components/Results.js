@@ -12,16 +12,6 @@ function Results({ images, searchArtist }) {
   if(!images.length){
     return <h2>no results found!</h2>
   }
-  // console.log(images.results[0].thumb)
-  // Inside the onClick function is where you route the viewers to the sub component
-  // const onClick = (event) => {
-  //   if(event.target.id === '1993487'){
-  //     console.log(true)
-  //   }else{
-  //     console.log(false)
-  //   }
-  //   console.log(event.target.id)
-  // }
  console.log(images)
   return (
     <Container className="artist-results-container">
@@ -50,38 +40,6 @@ function Results({ images, searchArtist }) {
       </Link>
       </Col>
     ))} 
-       
-
-      {/* <Container>
-    <Row xs={1} md={2} lg={3} xl={4} className='g-4'>
-    {images.map((image) => {
-            return(
-     <Col key={image.id}>
-            <Card className='h-100'  >
-                {image.thumb && (
-               <Card.Img
-                variant='top'
-                src={image.thumb ? image.thumb : ''}
-                alt={image.id}
-            />
-        )}
-        <Card.Body>
-            {image.thumb ? (
-                ''
-            ) : (
-                <Card.Title>No Image Available</Card.Title>
-            )}
-            <Card.Text className='results-card-text'>{image.title}</Card.Text>
-        </Card.Body>
-        <Card.Footer>
-            <Button>test</Button>
-        </Card.Footer>
-    </Card>
-                   </Col>
-            )
-        })}
-        </Row>
-    </Container> */}
     </Row>
     </Container>
   )

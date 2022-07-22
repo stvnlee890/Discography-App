@@ -436,10 +436,12 @@ background-color: transparent;
     font-size: 10px;
     max-width: 100vw;
   }
-  
+ 
   /* ARTIST PROFILE COMPONENT*/
   .artist-profile-image {
-
+  }
+  .search-text {
+    width: 180px
   }
   .profile-image {
     width: 100%;
