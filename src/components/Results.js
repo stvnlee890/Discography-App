@@ -38,12 +38,16 @@ function Results({ images, searchArtist }) {
             id={image.id} 
             alt={searchArtist}
             />
+            <span className="results-image-title">
+
+            {image.title}
+            </span>
          
           
         </div>
        </Card>
        <Card.Body>
-        <Card.Footer >{image.title}
+        <Card.Footer >
         </Card.Footer>
        </Card.Body>
       </Link>

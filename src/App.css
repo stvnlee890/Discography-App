@@ -7,8 +7,12 @@
 #root {
   width: 100vw;
   height: 100vh;
+  background-color: #3a3c3d;
+  color: white;
 }
-
+.ArtistInfo {
+  background-color: #3a3c3d;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -38,24 +42,296 @@ h1 {
   background-color: #3a3c3d
 }
 
-.main-page {
-  background-color: #3a3c3d;
-}
 .App-link {
   color: #61dafb;
 }
 
-.home-image {
-  width: 10vh;
-  border: 3px solid lightskyblue;
-  cursor: pointer;
-}
-.bio {
+/* .bio {
   color: black;
-}
+} */
 
 /* ARTIST PROFILE COMPONENT */
 /*  */
+
+
+/* BIGGER SCREEN */
+/* ARTIST PROFILE COMPONENT*/
+.artist-profile-image {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 20px 3fr 20px;
+}
+.profile-image {
+  width: 40%;
+  height: auto;
+  padding: 20px 20px 20px 20px;
+  margin: 0;
+  grid-column: 2 / span 1;
+}
+.artist-info-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  /* display: grid; */
+
+}
+.artist-profile-container {
+  width: 50vw;
+
+}
+.h3-bio {
+  text-align: center;
+}
+
+/* ARTIST NAME CONTAINER */
+.artist-name-container {
+  width: 50vw;
+  text-align: center;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 20px 3fr 20px;
+}
+
+.artist-name.stage{
+  flex-wrap: wrap;
+  grid-column: 2 / span 1;
+  border-top: 1px solid #686869; 
+}
+.artist-name {
+grid-column: 2 / span 1;
+font-size: 14px;
+}
+h3 {
+  font-size: 20px;
+}
+.artist-name-real{
+  color: #ecedc5
+}
+.artist-info-name {
+  font-size: 20px;
+  padding: 20px 0px 30px 0px;
+  color: #ecedc5
+}
+h3{
+  margin: 0;
+}
+/* BIO */
+.bio-container {
+  /* background-color: #3a3c3d; */
+  width: 50vw;
+  margin-top: 10px;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 20px 3fr 20px;
+}
+.bio {
+  /* width: 100%; */
+  text-align: left;
+  grid-column: 2 / span 1;
+}
+p {
+  padding-bottom: 10px;
+  grid-column: 2 / span 1;
+  font-size: 12px;
+}
+a {
+  text-decoration: none;
+  color: #448aeb;
+  font-weight: bold;
+}
+.p-tag-bio {
+  text-align: center;
+  font-size: 14px;
+  padding-top: 20px;
+  border-top: 1px solid #686869; 
+  font-weight: bold;
+}
+
+/* URL LINKS*/
+.url-container {
+display: grid;
+grid-template-rows: 1fr;
+grid-template-columns: 20px 3fr 20px;
+}
+.url {
+  /* background-color: #3a3c3d; */
+  margin-top: 10px;
+  width: 50vw;
+}
+ul {
+  list-style: none;
+  display: grid;
+  padding: 0;
+  grid-template-rows: 1fr;
+  grid-template-columns: 20px 3fr 20px;
+}
+li {
+  display: flex;
+  grid-column: 2 / span 1;
+}
+.a-tag-url {
+  display: block;
+  text-decoration: none;
+  width: 80%;
+  word-wrap: break-word;
+  text-decoration: none;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: #448aeb;
+  font-weight: normal;
+}
+.h3-url {
+  text-align: center;
+  border-top: 1px solid #686869; 
+  grid-column: 2 / span 1;
+  padding-top: 20px;
+}
+
+/*DISCOGRAPHY*/
+
+.thumbnail-container {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 20px 3fr 20px;
+  /* background: #3a3c3d; */
+  margin-bottom: 5px;
+}
+.discog-releases-container {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 20px 3fr 20px;
+}
+.discog-releases {
+  text-align: center;
+  /* background: #3a3c3d; */
+  padding-top: 20px;
+  margin-bottom: 40px;
+  border-top: 1px solid #686869; 
+  grid-column: 2 / span 1;
+  font-size: 15px;
+}
+.discog-main-container {
+  width: 50vw;
+  display: flex;
+
+}
+.discog-container {
+  /* background-color: #3a3c3d; */
+  margin-top: 30px;
+}
+.music-thumb {
+  display: flex;
+  grid-column: 2 / span 1;
+  /* background-color: #3a3c3d; */
+}
+.discog-info {
+  /* background-color:#3a3c3d; */
+  margin-left: 30px;
+  display: grid
+}
+.discog-music-title {
+  font-size: 12px;
+  font-weight: normal;
+  color: #ecedc5;
+  font-family: 'Chivo', sans-serif;
+  margin-left: 70px;
+}
+.discog-artist-name {
+  font-size: 10px;
+  font-family: 'Chivo', sans-serif;
+  padding-bottom: 10px;
+  margin-left: 70px;
+}
+.discog-thumb {
+  display: grid;
+  padding-bottom: 10px;
+}
+.discog-thumb-img {
+  width: 80px;
+  margin-left: 40px;
+}
+.discog-music-title {
+  font-weight: 600;
+}
+.empty-image {
+  width: 20%;
+  height: auto;
+  padding: 20px 20px 20px 20px;
+  margin: 0;
+  grid-column: 2 / span 1;
+}
+/* artist profile buttons*/
+.discog-page-release {
+  margin: 10px;
+  text-align: center;
+}
+.button-container {
+  text-align: center;
+}
+.discog-button {
+  border: 2px solid black;
+  border-radius: 8px;
+  width: 60px;
+  font-size: 10px;
+  cursor: pointer;
+  text-align: center;
+  margin-left: 10px;
+  margin-bottom: 10px
+}
+
+/* RESULTS PAGE*/
+
+/* .image-results {
+display: grid;
+grid-template-rows: 1fr 20px;
+grid-template-columns: 1fr 1fr 1fr;
+} */
+.g-4 {
+display: flex;
+width: 100%;
+margin: 0;
+/* display: grid;
+grid-template-rows: 1fr 20px;
+grid-template-columns: 1fr 1fr 1fr; */
+};
+
+.results-link-tag {
+vertical-align: middle;
+display: flex;
+align-items: center;
+justify-content: center;
+height: 100%;
+font-size: 96.2px;
+}
+.results-col {
+width: 120px;
+}
+.h-100 {
+border: none;
+background-color: transparent;
+}
+.results-image-title {
+font-size: 10px;
+color: #ecedc5;
+}
+.results-footer {
+margin-bottom: 30px;
+}
+
+.image-thumbnail {
+flex-wrap: wrap;
+width: 100%;
+height: 100px;
+}
+
+
+.results-card-text {
+background-color: transparent;
+}
+
+
+
+
 
 
 @media (max-width: 480px) {
@@ -73,7 +349,7 @@ h1 {
     grid-template-columns: 20px 3fr 20px;
   }
   .profile-image {
-    width: 20%;
+    width: 40%;
     height: auto;
     padding: 20px 20px 20px 20px;
     margin: 0;
@@ -82,13 +358,13 @@ h1 {
   .artist-info-container {
     /* display: flex;
     flex-wrap: wrap; */
-    background-color:#3a3c3d;
+    /* background-color:#3a3c3d; */
     width: 100vw;
     display: grid;
 
   }
   .artist-profile-container {
-    background-color:#3a3c3d;
+    /* background-color:#3a3c3d; */
   }
   .h3-bio {
     text-align: center;
@@ -97,7 +373,7 @@ h1 {
 /* ARTIST NAME CONTAINER */
   .artist-name-container {
     width: 100vw;
-    background: #3a3c3d;
+    /* background: #3a3c3d; */
     text-align: center;
     display: grid;
     grid-template-rows: 1fr;
@@ -121,7 +397,7 @@ h1 {
   }
 /* BIO */
   .bio-container {
-    background-color: #3a3c3d;
+    /* background-color: #3a3c3d; */
     width: 100vw;
     margin-top: 10px;
     display: grid;
@@ -136,7 +412,7 @@ h1 {
   p {
     padding-bottom: 10px;
     grid-column: 2 / span 1;
-    color: white;
+   
   }
   a {
     text-decoration: none;
@@ -158,7 +434,7 @@ h1 {
   grid-template-columns: 20px 3fr 20px;
 }
   .url {
-    background-color: #3a3c3d;
+    /* background-color: #3a3c3d; */
     margin-top: 10px;
     width: 100vw;
   }
@@ -197,7 +473,7 @@ h1 {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 20px 3fr 3fr 20px;
-    background: #3a3c3d;
+    /* background: #3a3c3d; */
     margin-bottom: 5px;
   }
   .discog-releases-container {
@@ -207,29 +483,28 @@ h1 {
   }
   .discog-releases {
     text-align: center;
-    background: #3a3c3d;
+    /* background: #3a3c3d; */
     padding-top: 20px;
     margin-bottom: 40px;
-    color: white;
     border-top: 1px solid #686869; 
     grid-column: 2 / span 1;
     font-size: 15px;
   }
   .discog-main-container {
-    width: 100vw;
-    background-color: #3a3c3d;
+    /* width: 100vw;
+    background-color: #3a3c3d; */
   }
   .discog-container {
-    background-color: #3a3c3d;
+    /* background-color: #3a3c3d; */
     margin-top: 30px;
   }
   .music-thumb {
     display: flex;
     grid-column: 2 / span 1;
-    background-color: #3a3c3d;
+    /* background-color: #3a3c3d; */
   }
   .discog-info {
-    background-color:#3a3c3d;
+    /* background-color:#3a3c3d; */
     margin-left: 30px;
     display: grid
   }
@@ -243,7 +518,6 @@ h1 {
   .discog-artist-name {
     font-size: 12px;
     font-family: 'Chivo', sans-serif;
-    color: white;
     padding-bottom: 10px
 
   }
@@ -317,13 +591,11 @@ h1 {
 .results-footer {
   margin-bottom: 10px;
 }
-.image-results {
 
-}
 .image-thumbnail {
   flex-wrap: wrap;
   width: 100%;
-  height: 110px;
+  height: 100px;
 }
 
 

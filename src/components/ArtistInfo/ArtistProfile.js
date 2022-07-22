@@ -27,7 +27,7 @@ function ArtistProfile({ artistInformation }) {
        {artistInformation.realname ? 
       <div className='artist-name'>
         <h3>Real Name</h3>
-        <span>{artistInformation.realname}</span>
+        <span className='artist-name-real'>{artistInformation.realname}</span>
       </div> :null}
 
      <div className='artist-name'>

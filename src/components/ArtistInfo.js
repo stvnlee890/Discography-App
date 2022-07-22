@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import ArtistProfile from "./ArtistInfo/ArtistProfile";
 import Discography from "./ArtistInfo/Discography";
-
+import '../App.css'
 
 function ArtistInfo({ token }) {
 
