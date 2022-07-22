@@ -52,9 +52,9 @@ useEffect(() => {
   return (
     <div className="App">
       <nav className='navigation' >
-        <h1>
-       <Link to='/' style={{textDecoration: 'none'}}>Home</Link>
-        </h1>
+        <h5>
+       <Link to='/' style={{textDecoration: 'none'}}>HOME</Link>
+        </h5>
        <Search searchArtist={searchArtist} setSearchArtist={setSearchArtist} getImages={getImages} />
       </nav>
       <main className='main-page'>

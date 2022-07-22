@@ -80,8 +80,8 @@ function Discography({ artistId }){
         {releases ? releases.pagination.page + ' out of ' + releases.pagination.pages : <p>loading</p>}
       </div>
       <div className='button-container'>
-      <button className='discog-button prev' onClick={()=> setCount((prev) => prev > 1 ? prev - 1 : 1)}>Previous</button>
-      <button className='discog-button next' onClick={()=> setCount((prev) => prev < 50 ? prev + 1 : 50)}>Next</button>
+          <button className='discog-button prev' onClick={()=> setCount((prev) => prev > 1 ? prev - 1 : 1)}>Previous</button>
+         <button className='discog-button next' onClick={()=> setCount((prev) => prev < 50 ? prev + 1 : 50)}>Next</button>
       </div>
     </div>
   )

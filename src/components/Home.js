@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
-
+import { Carousel } from 'react-bootstrap'
 function Home({ images, token }) {
 
 // const[homeImage, setHomeImage] = useState('')
@@ -28,22 +28,18 @@ function Home({ images, token }) {
 // .catch(console.error);
 // }, [])
 // console.log(homeImage)
-console.log(images)
+// console.log(images)
 return(
 
-  // <div className='cover-image-container'>
-  //   <h1>home</h1>
-  //   {images.slice(1, 15).map((coverImage, index) => (
-  //     <div className='cover-image' key={index}>
-  //     {coverImage ? 
-  //     <img onClick={(event) => console.log(event.target)} key={id} className='home-image'  alt='cover-img' src={coverImage.cover_image} />: null}
-  //     </div>
-  //   ))}
-  // </div>
+  <div className='home-container'>
   
-  <div>
- 
+    <img src={require('./images/Vince-Staples.jpeg')} height={200} width={200} alt='vince staples'/> 
+    <img src={require('./images/Devonte-Hynes.jpeg')} height={200} width={200} alt='devonte hynes'/> 
+    <img src={require('./images/Hyukoh.jpeg')} height={200} width={200} alt='hyukoh'/> 
+    <img src={require('./images/Little-Dragon.jpeg')} height={200} width={200} alt='little dragon'/> 
   </div>
+  
+
  
 )
 }
