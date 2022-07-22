@@ -1,7 +1,7 @@
 // import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import App from '../../App';
-import '../../App.css'
+
 
 function Discography({ artistId }){
   
