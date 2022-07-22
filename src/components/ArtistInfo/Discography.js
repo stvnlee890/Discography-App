@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import App from '../../App';
 
 
-function Discography({ artistId }){
+const Discography = ({ artistId }) => {
   
   // let {artistId} = useParams()
   const token = process.env.REACT_APP_ACCESS_TOKEN;
@@ -21,7 +21,7 @@ function Discography({ artistId }){
  
   
   
-  function getReleaseApi () {
+  const getReleaseApi = () => {
     fetch(`${discogUrl}${artistId}/releases?page=${count}&per_page=10`, {
       headers: {
         'Authorization': `Discogs token=${token}`,
@@ -55,6 +55,7 @@ function Discography({ artistId }){
       </div>
     )
   }
+ console.log(releases)
   return(
     <div className='discog-container' >
       <div className='discog-releases-container'>

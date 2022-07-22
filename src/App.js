@@ -13,7 +13,7 @@ function App() {
   const token = process.env.REACT_APP_ACCESS_TOKEN;
 
  
-  function getImages() {
+  const getImages = () => {
   const searchOptions = {
     key: process.env.REACT_APP_DISCOG_KEY,
     secret: process.env.REACT_APP_DISCOG_SECRET,
@@ -35,16 +35,11 @@ function App() {
     console.log(response)
     const artistType = response.results.filter((artist) => artist.type === 'artist' );
     setImages(artistType)
-    // setImages(response.results);
-    //react renders after a fetch, and then sets the searchArtist state back to an empty string. 
     setSearchArtist('');
-    // console.log(images)
-    // console.log(images.type)
   })
   .catch(console.error);
   
 }
-
 useEffect(() => {
   getImages()
 }, [])

@@ -19,17 +19,23 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
-/* .App-navgiation {
-  background-color: #282c34;
-  min-height: 100vh;
+.home-introduction {
+  text-align: center;
+  margin-top: 100px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: #00aaff;
+}
+.home-description{
+  color: #4ca6e6
+}
+.home-container {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 100px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-} */
+}
+
 .navigation {
 
 padding: 10px
@@ -383,6 +389,46 @@ background-color: transparent;
     width: 40vw;
     height: auto;
   }
+
+  .g-4 {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    /* display: grid;
+    grid-template-rows: 1fr 20px;
+    grid-template-columns: 1fr 1fr 1fr; */
+  };
+  
+  .results-link-tag {
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 96.2px;
+  }
+  .results-col {
+    width: 120px;
+  }
+  .h-100 {
+    border: none;
+    background-color: transparent;
+  }
+  .results-footer {
+    margin-bottom: 10px;
+  }
+  
+  .image-thumbnail {
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100px;
+  }
+  
+  
+  .results-card-text {
+    background-color: transparent;
+  }
+  
 }
 
 @media (max-width: 480px) {

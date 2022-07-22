@@ -2,11 +2,11 @@ import '../../index.css'
 import React from 'react'
 
 
-function ArtistProfile({ artistInformation }) {
-  // console.log(artistInformation)
+const ArtistProfile = ({ artistInformation }) => {
 
-  const bioRender = {};
 
+
+console.log(artistInformation)
 
   return(
     <div className='artist-profile-container'>
@@ -14,7 +14,7 @@ function ArtistProfile({ artistInformation }) {
         {artistInformation.images ? 
       <div className='artist-profile-image' >
         <img className='profile-image' alt='profile-img' src={artistInformation.images[0].uri} />
-      </div>:null}
+      </div>: null}
       
       <div className='artist-name-container'>
 
@@ -31,13 +31,15 @@ function ArtistProfile({ artistInformation }) {
       </div> :null}
 
      <div className='artist-name'>
+       <h3>Aliases</h3>
       {artistInformation.aliases ? 
-        [<h3>Aliases</h3>,
-        artistInformation.aliases.map((aliases, index) => (
-        <span className='artist-aliases' key={index}>
-          {` ${aliases.name}|`}
-        </span>
-        ))]: null}
+        artistInformation.aliases.map((aliases, index) => {
+        return <div key={aliases.id}>
+          <span className='artist-aliases'>
+            {`${aliases.name}`}
+           </span>
+        </div>
+        }): null}
      </div>
       </div>
   
@@ -50,20 +52,21 @@ function ArtistProfile({ artistInformation }) {
           ></span>
         </div> : null}
 
-
       <div className='url'>
-        {artistInformation.urls ? 
-        [
         <div className='url-container'>
-          <h3 className='h3-url' >URL</h3>
-        </div>,
-        artistInformation.urls.map((nameVar, index)=>(
+          <h3 className='h3-url'>URL</h3>
+        </div>
+        {artistInformation.urls ? 
+        artistInformation.urls.map((nameVar, index, element)=>{
+          console.log(index)
+          return <div key={`urls-${index}`}>
           <ul>
-            <li key={index}>
-            <a className='a-tag-url' href={nameVar}>{nameVar}</a>
-          </li>
+            <li>
+              <a className='a-tag-url' href={nameVar}>{nameVar}</a>
+            </li>
           </ul>
-          ))] : null}
+          </div>
+        }) : null}
       </div>
     </div>
   )

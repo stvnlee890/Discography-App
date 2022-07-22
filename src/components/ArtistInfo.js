@@ -37,7 +37,7 @@ fetch(url, {
   //react renders after a fetch, and then sets the searchArtist state back to an empty string. 
 })
 .catch(console.error);
-
+ 
 }, [])
 console.log(artistInformation)
 if(error){
