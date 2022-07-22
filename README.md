@@ -1,3 +1,23 @@
+# Search your favorite Artist
+
+This project is a music discography application where you can search your favorite artists and learn more about them! This app uses React and the Discogs API for the contents displayed when users search an artist their curious about. My goal was to provide the users with  a search functionality so they can type the name of the musician they’re looking for and provide them with multiple results based on their input. From there, I wanted the users to be able to click on the cover images of the artists and display their information.  
+
+<img width="1012" alt="Screen Shot 2022-07-22 at 12 53 06 AM" src="https://user-images.githubusercontent.com/106281820/180391767-e6f193ea-dc7a-4257-bed2-fde0dff85131.png">
+
+## MVP GOALS 
+
+1.	Create an input field that will fetch the specified artist from the Discogs API.
+2.	Be able to click on artist poster so the page can route the user directly to the artist profile page an display their information.
+3.	Display multiple artists that match the keyword user inputs.
+4.	Have a simple nav bar that can take users to the home page and results page through the input field. 
+
+# Wireframes
+<img width="745" alt="Screen Shot 2022-07-14 at 10 37 22 PM" src="https://user-images.githubusercontent.com/106281820/180392064-302b8ce5-0edf-4b65-8780-f7393caf3b7c.png">
+<img width="727" alt="Screen Shot 2022-07-14 at 10 37 46 PM" src="https://user-images.githubusercontent.com/106281820/180392078-9bf10b21-9004-42a9-a585-5ebd6330becc.png">
+<img width="725" alt="Screen Shot 2022-07-14 at 10 38 04 PM" src="https://user-images.githubusercontent.com/106281820/180392092-8dab6e3f-bb50-472e-b48b-60e7ea89f50a.png">
+<img width="996" alt="Screen Shot 2022-07-14 at 10 55 19 PM" src="https://user-images.githubusercontent.com/106281820/180392100-bf26a2df-009b-4cbb-94c7-e1d43e78b1b2.png">
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
