@@ -24,7 +24,7 @@ function Results({ images, searchArtist }) {
   // }
  console.log(images)
   return (
-    <Container>
+    <Container className="artist-results-container">
       <Row xs={1} md={2} lg={3} xl={4} className='g-4'>
    {images.map((image) => (
       <Col className='results-col results-footer' key={image.id}>
@@ -38,13 +38,12 @@ function Results({ images, searchArtist }) {
             id={image.id} 
             alt={searchArtist}
             />
-            <span className="results-image-title">
-
-            {image.title}
-            </span>
          
           
         </div>
+            <span className="results-image-title">
+            {image.title}
+            </span>
        </Card>
        <Card.Body>
         <Card.Footer >

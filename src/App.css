@@ -88,6 +88,7 @@ h1 {
   border: 1px solid #2f3640;
   cursor: pointer;
 } */
+
 /* ARTIST PROFILE COMPONENT*/
 .artist-profile-image {
   display: grid;
@@ -115,8 +116,6 @@ h1 {
 .h3-bio {
   text-align: center;
 }
-
-/* ARTIST NAME CONTAINER */
 .artist-name-container {
   width: 50vw;
   text-align: center;
@@ -138,6 +137,9 @@ h3 {
   font-size: 20px;
 }
 .artist-name-real{
+  color: #ecedc5
+}
+.artist-aliases {
   color: #ecedc5
 }
 .artist-info-name {
@@ -223,6 +225,7 @@ li {
 /*DISCOGRAPHY*/
 
 .thumbnail-container {
+  width: 50vw;
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 20px 3fr 20px;
@@ -263,14 +266,14 @@ li {
   display: grid
 }
 .discog-music-title {
-  font-size: 14px;
-  font-weight: normal;
+  font-size: 16px;
+  font-weight: 600;
   color: #ecedc5;
   font-family: 'Chivo', sans-serif;
   margin-left: 70px;
 }
 .discog-artist-name {
-  font-size: 10px;
+  font-size: 14px;
   font-family: 'Chivo', sans-serif;
   padding-bottom: 10px;
   margin-left: 70px;
@@ -283,9 +286,7 @@ li {
   width: 80px;
   margin-left: 40px;
 }
-.discog-music-title {
-  font-weight: 600;
-}
+
 .empty-image {
   width: 20%;
   height: auto;
@@ -312,23 +313,17 @@ li {
 
 /* RESULTS PAGE*/
 
-/* .image-results {
-display: grid;
-grid-template-rows: 1fr 20px;
-grid-template-columns: 1fr 1fr 1fr;
-} */
+.artist-results-container{
+  width: 100vw;
+}
 .g-4 {
 display: flex;
 width: 100%;
 margin: 0;
-/* display: grid;
-grid-template-rows: 1fr 20px;
-grid-template-columns: 1fr 1fr 1fr; */
 };
 
-
 .results-col {
-width: 120px;
+width: 100vw;
 }
 .h-100 {
 border: none;
@@ -337,6 +332,7 @@ background-color: transparent;
 .results-image-title {
 font-size: 14px;
 color: #ecedc5;
+
 }
 .results-footer {
 margin-bottom: 30px;
@@ -344,10 +340,9 @@ margin-bottom: 30px;
 
 .image-thumbnail {
 flex-wrap: wrap;
-width: 100%;
-height: 330px;
+width: 70%;
+height: 270px;
 }
-
 
 .results-card-text {
 background-color: transparent;
@@ -368,12 +363,10 @@ background-color: transparent;
   
   /* ARTIST PROFILE COMPONENT*/
   .artist-profile-image {
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 20px 3fr 20px;
+
   }
   .profile-image {
-    width: 40%;
+    width: 100%;
     height: auto;
     padding: 20px 20px 20px 20px;
     margin: 0;
@@ -387,9 +380,7 @@ background-color: transparent;
     display: grid;
 
   }
-  .artist-profile-container {
-    /* background-color:#3a3c3d; */
-  }
+
   .h3-bio {
     text-align: center;
   }
@@ -412,11 +403,19 @@ background-color: transparent;
  .artist-name {
   grid-column: 2 / span 1;
  }
+ .artist-aliases {
+  font-family: 'Chivo', sans-serif;
+ }
+ .artist-name-real {
+  font-family: 'Chivo', sans-serif;
+ }
   .artist-info-name {
-    font-size: 18px;
+    font-family: 'Chivo', sans-serif;
+    font-size: 20px;
     padding: 20px 0px 30px 0px
   }
   h3{
+    font-size: 14px;
     margin: 0;
   }
 /* BIO */
@@ -495,6 +494,7 @@ background-color: transparent;
 
   .thumbnail-container {
     display: grid;
+    width: 100vw;
     grid-template-rows: 1fr;
     grid-template-columns: 20px 3fr 3fr 20px;
     /* background: #3a3c3d; */
@@ -514,10 +514,7 @@ background-color: transparent;
     grid-column: 2 / span 1;
     font-size: 15px;
   }
-  .discog-main-container {
-    /* width: 100vw;
-    background-color: #3a3c3d; */
-  }
+
   .discog-container {
     /* background-color: #3a3c3d; */
     margin-top: 30px;
