@@ -31,11 +31,14 @@ function Results({ images, searchArtist }) {
         <Link className="results-link-tag" to={`/artists/${image.id}`} style={{textDecoration: 'none'}}>
         <Card className='h-100'  >
           <div className='image-results' >
+           
+          
           <Card.Img className="image-thumbnail"
             src={image.thumb} 
             id={image.id} 
             alt={searchArtist}
-          />
+            />
+         
           
         </div>
        </Card>

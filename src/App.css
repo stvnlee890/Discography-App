@@ -252,7 +252,7 @@ h1 {
     padding-bottom: 10px;
   }
   .discog-thumb-img {
-    width: 70px;
+    width: 100px;
   }
   .discog-music-title {
     font-weight: 600;
@@ -299,14 +299,13 @@ h1 {
   grid-template-columns: 1fr 1fr 1fr; */
 };
 
-.img-thumbnail {
-  /* padding: 0.25em;
-  flex: 1;
-  height: 100px;
-  width: 200px; */
-  height: 250px;
-  width: 180px;
-  /* object-fit: cover; */
+.results-link-tag {
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 96.2px;
 }
 .results-col {
   width: 120px;
