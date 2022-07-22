@@ -22,7 +22,7 @@ function Results({ images, searchArtist }) {
   //   }
   //   console.log(event.target.id)
   // }
- 
+ console.log(images)
   return (
     <Container>
       <Row xs={1} md={2} lg={3} xl={4} className='g-4'>
@@ -34,7 +34,7 @@ function Results({ images, searchArtist }) {
            
           
           <Card.Img className="image-thumbnail"
-            src={image.thumb} 
+            src={image.cover_image} 
             id={image.id} 
             alt={searchArtist}
             />

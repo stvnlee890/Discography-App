@@ -55,6 +55,39 @@ h1 {
 
 
 /* BIGGER SCREEN */
+
+/* SEARCH BAR */
+.search-box {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #2f3640;
+  height: 40px;
+  display: flex;
+}
+.search-text {
+  border: none;
+  background: none;
+  outline: none;
+  float:left;
+  color: white;
+  font-size: 16px;
+  line-height: 40px;
+  width: 240px;
+  padding-left: 20px;
+}
+/* .search-button {
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  background: #2f3640;
+  font-size: 10px;
+  color: white;
+  border: 1px solid #2f3640;
+  cursor: pointer;
+} */
 /* ARTIST PROFILE COMPONENT*/
 .artist-profile-image {
   display: grid;
@@ -132,7 +165,7 @@ h3{
 p {
   padding-bottom: 10px;
   grid-column: 2 / span 1;
-  font-size: 12px;
+  font-size: 14px;
 }
 a {
   text-decoration: none;
@@ -141,7 +174,7 @@ a {
 }
 .p-tag-bio {
   text-align: center;
-  font-size: 14px;
+  font-size: 20px;
   padding-top: 20px;
   border-top: 1px solid #686869; 
   font-weight: bold;
@@ -176,7 +209,7 @@ li {
   word-wrap: break-word;
   text-decoration: none;
   flex-wrap: wrap;
-  font-size: 12px;
+  font-size: 14px;
   color: #448aeb;
   font-weight: normal;
 }
@@ -271,7 +304,7 @@ li {
 .discog-button {
   border: 2px solid black;
   width: 60px;
-  font-size: 10px;
+  font-size: 12px;
   cursor: pointer;
   margin-left: 10px;
   margin-bottom: 10px
@@ -293,14 +326,7 @@ grid-template-rows: 1fr 20px;
 grid-template-columns: 1fr 1fr 1fr; */
 };
 
-.results-link-tag {
-vertical-align: middle;
-display: flex;
-align-items: center;
-justify-content: center;
-height: 100%;
-font-size: 96.2px;
-}
+
 .results-col {
 width: 120px;
 }
@@ -309,7 +335,7 @@ border: none;
 background-color: transparent;
 }
 .results-image-title {
-font-size: 10px;
+font-size: 14px;
 color: #ecedc5;
 }
 .results-footer {
@@ -319,7 +345,7 @@ margin-bottom: 30px;
 .image-thumbnail {
 flex-wrap: wrap;
 width: 100%;
-height: 100px;
+height: 330px;
 }
 
 

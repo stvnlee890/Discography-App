@@ -1,6 +1,6 @@
 
 import { useNavigate } from 'react-router-dom'
-import '../App.css';
+import '../App.css'; 
 
 function Search({ searchArtist, setSearchArtist, getImages }){
 
@@ -19,11 +19,13 @@ let navigate = useNavigate();
 
   return(
     <form onSubmit={handleSubmit} >
-    <input placeholder="search artist" type='text' onChange={handleChange} value={searchArtist}>
+    <div className='search-box'>
+    <input className='search-text' placeholder="search artist" type='text' onChange={handleChange} value={searchArtist}>
     </input>
-    <button type='submit' >
+    </div>
+    {/* <button className='search-button'>
       search
-    </button>
+    </button> */}
    </form>
   )
 }
