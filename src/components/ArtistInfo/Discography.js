@@ -1,26 +1,13 @@
-// import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-import App from '../../App';
-
 
 const Discography = ({ artistId }) => {
-  
-  // let {artistId} = useParams()
+
   const token = process.env.REACT_APP_ACCESS_TOKEN;
   const discogUrl = 'https://api.discogs.com/artists/'
-
   const[releases, setReleases] = useState()
   const[error, setError] = useState(false)
   const[count, setCount] = useState(1)
 
-  // const[page, setPage] = useState()
-  // console.log(page)
-  // const nextUrl = `https://api.discogs.com/artists/${artistId}/releases?page=2&per_page=10`
-  // const prevUrl = `https://api.discogs.com/artists/${artistId}/releases?page=1&per_page=10`
-  console.log(artistId)
- 
-  
-  
   const getReleaseApi = () => {
     fetch(`${discogUrl}${artistId}/releases?page=${count}&per_page=10`, {
       headers: {
@@ -36,11 +23,8 @@ const Discography = ({ artistId }) => {
     })
     .then(response => {
       setReleases(response);
-      // setPage(url)
-      //react renders after a fetch, and then sets the searchArtist state back to an empty string. 
     })
     .catch(console.error);
- 
   }
   useEffect(() => {
     getReleaseApi()

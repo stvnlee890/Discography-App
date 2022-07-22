@@ -1,13 +1,7 @@
 import '../../index.css'
 import React from 'react'
 
-
 const ArtistProfile = ({ artistInformation }) => {
-
-
-
-console.log(artistInformation)
-
   return(
     <div className='artist-profile-container'>
 
@@ -17,7 +11,6 @@ console.log(artistInformation)
       </div>: null}
       
       <div className='artist-name-container'>
-
       {artistInformation.name ? 
         <div className='artist-name stage'>
           <h3 className='artist-info-name'>{artistInformation.name}</h3>

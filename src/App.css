@@ -52,13 +52,6 @@ h1 {
   color: #61dafb;
 }
 
-/* .bio {
-  color: black;
-} */
-
-/* ARTIST PROFILE COMPONENT */
-/*  */
-
 
 /* BIGGER SCREEN */
 
@@ -84,17 +77,7 @@ h1 {
   width: 240px;
   padding-left: 20px;
 }
-/* .search-button {
-  float: right;
-  display: flex;
-  justify-content: center;
-  align-items: center; 
-  background: #2f3640;
-  font-size: 10px;
-  color: white;
-  border: 1px solid #2f3640;
-  cursor: pointer;
-} */
+
 
 /* ARTIST PROFILE COMPONENT*/
 .artist-profile-image {
@@ -113,8 +96,6 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   width: 100vw;
-  /* display: grid; */
-
 }
 .artist-profile-container {
   width: 50vw;
@@ -162,7 +143,7 @@ h3{
 }
 /* BIO */
 .bio-container {
-  /* background-color: #3a3c3d; */
+
   width: 50vw;
   margin-top: 10px;
   display: grid;
@@ -170,7 +151,7 @@ h3{
   grid-template-columns: 20px 3fr 20px;
 }
 .bio {
-  /* width: 100%; */
+
   text-align: left;
   grid-column: 2 / span 1;
 }
@@ -199,7 +180,6 @@ grid-template-rows: 1fr;
 grid-template-columns: 20px 3fr 20px;
 }
 .url {
-  /* background-color: #3a3c3d; */
   margin-top: 10px;
   width: 50vw;
 }
@@ -239,7 +219,7 @@ li {
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 20px 3fr 20px;
-  /* background: #3a3c3d; */
+
   margin-bottom: 5px;
 }
 .discog-releases-container {
@@ -249,7 +229,7 @@ li {
 }
 .discog-releases {
   text-align: center;
-  /* background: #3a3c3d; */
+ 
   padding-top: 20px;
   margin-bottom: 40px;
   border-top: 1px solid #686869; 
@@ -262,16 +242,14 @@ li {
 
 }
 .discog-container {
-  /* background-color: #3a3c3d; */
+
   margin-top: 30px;
 }
 .music-thumb {
   display: flex;
   grid-column: 2 / span 1;
-  /* background-color: #3a3c3d; */
 }
 .discog-info {
-  /* background-color:#3a3c3d; */
   margin-left: 30px;
   display: grid
 }
@@ -350,7 +328,7 @@ margin-bottom: 30px;
 
 .image-thumbnail {
 flex-wrap: wrap;
-width: 70%;
+width: 80%;
 height: 240px;
 }
 
@@ -393,10 +371,6 @@ background-color: transparent;
   .g-4 {
     display: flex;
     width: 100%;
-    margin: 0;
-    /* display: grid;
-    grid-template-rows: 1fr 20px;
-    grid-template-columns: 1fr 1fr 1fr; */
   };
   
   .results-link-tag {
@@ -417,13 +391,12 @@ background-color: transparent;
   .results-footer {
     margin-bottom: 10px;
   }
-  
+
   .image-thumbnail {
     flex-wrap: wrap;
     width: 100%;
     height: 100px;
   }
-  
   
   .results-card-text {
     background-color: transparent;
@@ -658,28 +631,14 @@ background-color: transparent;
 
   /* RESULTS PAGE*/
 
-/* .image-results {
-  display: grid;
-  grid-template-rows: 1fr 20px;
-  grid-template-columns: 1fr 1fr 1fr;
-} */
+
 .g-4 {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
-  margin: 0;
-  /* display: grid;
-  grid-template-rows: 1fr 20px;
-  grid-template-columns: 1fr 1fr 1fr; */
 };
 
-.results-link-tag {
-  vertical-align: middle;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  font-size: 96.2px;
-}
+
 .results-col {
   width: 120px;
 }
@@ -697,10 +656,8 @@ background-color: transparent;
   height: 100px;
 }
 
-
 .results-card-text {
   background-color: transparent;
 }
-
 
 }
