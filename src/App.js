@@ -31,10 +31,8 @@ function App() {
   })
   .then(response => response.json())
   .then(response => {
-    console.log(response)
     const artistType = response.results.filter((artist) => artist.type === 'artist' );
     setImages(artistType)
-    console.log(artistType)
     setSearchArtist('');
   })
   .catch(console.error);

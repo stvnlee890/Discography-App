@@ -6,11 +6,9 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 
 const Results = ({ images, searchArtist })=>{
-  console.log(searchArtist)
   if(!images.length){
     return <h2>no results found!</h2>
   }
- console.log(images)
   return (
     <Container className="artist-results-container">
       <Row xs={1} md={2} lg={3} xl={4} className='g-4'>

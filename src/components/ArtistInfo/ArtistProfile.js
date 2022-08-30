@@ -51,7 +51,7 @@ const ArtistProfile = ({ artistInformation }) => {
         </div>
         {artistInformation.urls ? 
         artistInformation.urls.map((nameVar, index, element)=>{
-          console.log(index)
+    
           return <div key={`urls-${index}`}>
           <ul>
             <li>

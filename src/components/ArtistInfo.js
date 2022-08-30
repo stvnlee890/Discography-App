@@ -9,15 +9,12 @@ function ArtistInfo({ token }) {
 
   const[artistInformation, setArtistInformation] = useState()
   const[error, setError] = useState(false)
-  // const token = process.env.REACT_APP_ACCESS_TOKEN;
-
+ 
 let {artistId} = useParams()
 useEffect(() => {
-console.log(artistId)
 
 const discogUrl = 'https://api.discogs.com/artists/'
 const url = `${discogUrl}${artistId}`
-console.log(url)
 
 fetch(url, {
   headers: {
@@ -33,13 +30,11 @@ fetch(url, {
 }) 
 .then(response => {
   setArtistInformation(response);
-  console.log(response)
-  //react renders after a fetch, and then sets the searchArtist state back to an empty string. 
 })
 .catch(console.error);
  
 }, [])
-console.log(artistInformation)
+
 if(error){
   return(
     <div>
@@ -50,7 +45,6 @@ if(error){
   )
 }
 
-// console.log(artistInformation)
 return(
   <div className="artist-info-container">
 

@@ -13,7 +13,7 @@ const Discography = ({ artistId }) => {
       headers: {
         'Authorization': `Discogs token=${token}`,
         'Accept': 'application/vnd.discogs.v2.html+json'
-      },
+      }
     })
     .then(response => {
       if(response.status === 404){
@@ -38,8 +38,8 @@ const Discography = ({ artistId }) => {
         </h1>
       </div>
     )
-  }
- console.log(releases)
+  }  
+  console.log(releases)
   return(
     <div className='discog-container' >
       <div className='discog-releases-container'>
