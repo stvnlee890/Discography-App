@@ -1,0 +1,3 @@
+[submodule "Discography-App"]
+	path = Discography-App
+	url = git@github.com:stvnlee890/Discography-App.git
