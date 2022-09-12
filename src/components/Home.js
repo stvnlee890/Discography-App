@@ -6,7 +6,7 @@ return(
   <div className='home-component'>
     <div className='home-introduction'>
     <h1>
-      Welcome
+      Welcome!
     </h1>
     <p className='home-description'>
       Search your favorite artists and read more about them!
