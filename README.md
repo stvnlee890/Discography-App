@@ -1,6 +1,12 @@
 # Search your favorite Artist
 
-This project is a music discography application where you can search your favorite artists and learn more about them! This app uses React and the Discogs API for the contents displayed when users search an artist their curious about. My goal was to provide the users with  a search functionality so they can type the name of the musician they’re looking for and provide them with multiple results based on their input. From there, I wanted the users to be able to click on the cover images of the artists and display their information.  
+I have developed a music discography application using React and the Discogs API. This application allows users to search for their favorite artists and explore detailed information about them. The main feature of the app is the search functionality, which enables users to enter the name of the musician they are interested in. The app then displays multiple search results based on the user's input.
+
+Once the search results are displayed, users can click on the cover images of the artists to access more information about them. This information includes details about their discography, albums, singles, and other relevant data provided by the Discogs API.
+
+The primary goal of this application is to provide music enthusiasts with a convenient way to learn more about their favorite artists. By leveraging the Discogs API, users can access comprehensive and up-to-date information about musicians, empowering them to discover new music and delve deeper into their musical interests.
+
+Overall, this music discography application offers an intuitive and user-friendly interface that enhances the music exploration experience, making it enjoyable for users to dive into the world of their beloved musicians.
 
 <img width="1012" alt="Screen Shot 2022-07-22 at 12 53 06 AM" src="https://user-images.githubusercontent.com/106281820/180391767-e6f193ea-dc7a-4257-bed2-fde0dff85131.png">
 
