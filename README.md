@@ -37,7 +37,7 @@ This application was created using React and the Discogs API.
 2. `cd` into `Discography-App`.
 3. Run `npm i` to install necessary dependencies.
 4. Create a `.env` file in the root directory.
-5. Create a discog account for an API Key and Secret. [link](https://accounts.discogs.com/login?login_challenge=924d182e38a3448ab6501866ef2baf24)
+5. Create a [discog account](https://accounts.discogs.com/login?login_challenge=924d182e38a3448ab6501866ef2baf24) for an API Key and Secret.
 6. Inside the `.env` file create a `REACT_APP_ACCESS_TOKEN` and `REACT_APP_DISCOG_SECRET` variable to store the token and secret respectively.
 7. Feel free to play with the code!
 
